@@ -3,4 +3,4 @@
 
 Generate discord nitro codes and check them
 
-This code was developed in colaberation with [this discord server]() make sure to check them out
+*This code was developed in colaberation with [this discord server]() make sure to check them out*
