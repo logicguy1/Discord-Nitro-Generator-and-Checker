@@ -32,7 +32,13 @@ class NitroGen: # Initialise the class
         url = url if url != "" else None # If the url is empty make it be None insted
 
         self.generator(num) # Generate the nitro codes
-        self.checker(notify = url) # Check the codes
+        result = self.checker(notify = url) # Check the codes
+
+        print(f"""
+Results:
+ Valid: {len(result['valid'])}
+ Invalid: {result['invalid']}
+ Valid Codes: {', '.join(result['valid'])}""") # Give a report of the results of the check
 
         input("\nThe end! Press Enter 5 times to close the program.") # Tell the user the program finished
         [input(i) for i in range(4,0,-1)] # Wait for 4 enter presses
@@ -63,6 +69,8 @@ class NitroGen: # Initialise the class
             print(f"Genned {amount} codes | Time taken: {round(time.time() - start, 5)}s\n")
 
     def checker(self, notify = None): # Function used to check nitro codes from a file
+        valid = [] # A list of the valid codes
+        invalid = 0 # The amount of invalid codes detected
         with open(self.fileName, "r", encoding="utf-8") as file: # Open the file containing the nitro codes
             for line in file.readlines(): # Loop over each line in the file
                 nitro = line.strip("\n") # Remove the newline at the end of the nitro code
@@ -74,6 +82,7 @@ class NitroGen: # Initialise the class
 
                 if response.status_code == 200: # If the responce went through
                     print(f" Valid | {nitro} ") # Notify the user the code was valid
+                    valid.append(nitro) # Append the nitro code the the list of valid codes
 
                     if notify is not None: # If a webhook has been added
                         DiscordWebhook(
@@ -82,8 +91,12 @@ class NitroGen: # Initialise the class
                         ).execute() # Send the message to discord letting the user know there has been a valid nitro code
                     else: # If there has not been a discord webhook setup just stop the code
                         break # Stop the loop since a valid code was found
+
                 else: # If the responce got ignored or is invalid ( such as a 404 or 405 )
-                	print(f" Invalid | {nitro} ") # Tell the user it tested a code and it was invalid
+                    print(f" Invalid | {nitro} ") # Tell the user it tested a code and it was invalid
+                    invalid += 1 # Increase the invalid counter by one
+
+        return {"valid" : valid, "invalid" : invalid} # Return a report of the results
 
 if __name__ == '__main__':
     Gen = NitroGen() # Create the nitro generator object
