@@ -10,4 +10,4 @@ The only requement that is currently needed is `discord_webhook` that can be ins
 
 ---
 
-*This code was developed in colaberation with [this discord server](https://discord.gg/AtpBtMUpHK) make sure to check them out*
+*This code was developed in collaboration with [this discord server](https://discord.gg/AtpBtMUpHK) make sure to check them out*
