@@ -1,4 +1,6 @@
+<p align="center">
 <img src=https://img.shields.io/github/issues/logicguy1/Discord-Nitro-Gen-and-Checker?style=flat%22 />
+</p>
 
 # Discord-Nitro-Gen-and-Checker
 ![](https://cdn.discordapp.com/attachments/754989881901711411/806987377343070208/unknown.png)
