@@ -4,7 +4,7 @@
 
 # Discord Nitro Generator + Checker
 <p align="center">
-<img src=https://cdn.discordapp.com/attachments/754989881901711411/806987377343070208/unknown.png)>
+<img src=https://cdn.discordapp.com/attachments/754989881901711411/806987377343070208/unknown.png />
 </p>
 
 ## Usage
