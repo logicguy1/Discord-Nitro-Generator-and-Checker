@@ -3,7 +3,9 @@
 </p>
 
 # Discord Nitro Generator + Checker
-![](https://cdn.discordapp.com/attachments/754989881901711411/806987377343070208/unknown.png)
+<p align="center">
+<img src=https://cdn.discordapp.com/attachments/754989881901711411/806987377343070208/unknown.png)>
+</p>
 
 ## Usage
 Download the project files and run `main.py` 
