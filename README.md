@@ -15,6 +15,5 @@ You will be prompted with 2 questions the first one being the amounts of codes t
 The only requement that is currently needed is `discord_webhook` that can be installed using `python3 -m pip install discord_webhook` on linux and on windows it is `py -3 -m pip install discord_webhook`
 
 ---
-<button>ded</button>
 
 *This code was developed in collaboration with [this discord server](https://discord.gg/AtpBtMUpHK) make sure to check them out*
