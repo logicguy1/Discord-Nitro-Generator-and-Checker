@@ -2,7 +2,7 @@
 <img src=https://img.shields.io/github/issues/logicguy1/Discord-Nitro-Gen-and-Checker?style=flat%22 />
 </p>
 
-<h1>WARNING: THIS BRANCH IS EXPERIMENTAL AND MAY NOT WORK CORRECTLY</h1>
+<h3>WARNING: THIS BRANCH IS EXPERIMENTAL AND MAY NOT WORK CORRECTLY</h3>
 
 # Discord Nitro Generator + Checker
 <p align="center">
