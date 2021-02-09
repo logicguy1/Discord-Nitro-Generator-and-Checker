@@ -1,6 +1,6 @@
 <p align="center">
-<img src=https://img.shields.io/github/issues/logicguy1/Discord-Nitro-Gen-and-Checker?style=flat%22 />
-<img src=https://img.shields.io/github/stars/logicguy1/Discord-Nitro-Gen-and-Checker?style=flat%22 />
+<img src=https://img.shields.io/github/issues/logicguy1/Discord-Nitro-Gen-and-Checker?style=flat-square&logo=appveyor />
+<img src=https://img.shields.io/github/stars/logicguy1/Discord-Nitro-Gen-and-Checker?style=flat-square&logo=appveyor />
 <img src=https://img.shields.io/github/forks/logicguy1/Discord-Nitro-Gen-and-Checker?style=flat-square&logo=appveyor />
 </p>
 
