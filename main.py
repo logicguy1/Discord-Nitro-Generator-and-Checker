@@ -69,7 +69,8 @@ class NitroGen: # Initialise the class
                         elif result == 404:
                             print(f" Invalid | {url} | {result}")
                 except Exception as e:
-                    print(e)
+                    self.slowType(f"Invalid Proxy | {self.proxies[proxyIndx]}")
+                    self.proxies.remove(self.proxies[proxyIndx])
 
                 proxyIndx += 1
                 if proxyIndx == len(self.proxies):
@@ -203,30 +204,12 @@ Results:
             #     self.slowType("\nCannot accept more than 100 proxies at once", .02, newLine = False)
             #     exit()
 
-        self.slowType("\nChecking proxy list, this might take a few minutes.\n", .02)
-
-        pos = 0
-        valid = 0
-        amount = len(responce)
-
-        for i in responce:
-            pos += 1
-            try:
-                check = requests.get("https://httpbin.org/ip", proxies = {"http" : f"http://{i}", "https" : f"https://{i}"}, timeout = 10)
-            except Exception as e:
-                # print(e)
-                print(f" {pos} / {amount} | Invalid | {i}")
-            else:
-                print(f" {pos} / {amount} | Valid   | {i}")
-                self.proxies.append(i)
-                valid += 1
-
-        self.slowType(f"\nChecked {amount} proxies with {valid} successes {valid / amount * 100}%", .02)
+        self.slowType(f"\nLoaded {len(responce)} preoxies", .02)
 
     def quickProxyChecker(self, nitro, notify = None, proxy = None): # Used to check a single code at a time
         # Generate the request url
         url = f"https://discordapp.com/api/v6/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
-        response = requests.get(url, {"http" : f"http://{proxy}", "https" : f"https://{proxy}"}, timeout = 10) # Get the response from discord
+        response = requests.get(url, {"https" : proxy}, timeout = 3) # Get the response from discord
         print(response.status_code)
 
         if response.status_code == 200: # If the responce went through
@@ -239,7 +222,6 @@ Results:
                 ).execute()
 
         return response.status_code # Tell the main function the status code for checking for ratelimiting
-
 
 if __name__ == '__main__':
     Gen = NitroGen() # Create the nitro generator object
