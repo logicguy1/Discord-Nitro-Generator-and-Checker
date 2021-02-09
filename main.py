@@ -204,6 +204,8 @@ Results:
             #     self.slowType("\nCannot accept more than 100 proxies at once", .02, newLine = False)
             #     exit()
 
+        self.proxies = responce
+
         self.slowType(f"\nLoaded {len(responce)} preoxies", .02)
 
     def quickProxyChecker(self, nitro, notify = None, proxy = None): # Used to check a single code at a time
