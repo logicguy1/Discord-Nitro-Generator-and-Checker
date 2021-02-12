@@ -13,7 +13,7 @@
 ## Usage
 Download the project files and run `main.py`  
 You will be prompted with 2 questions the first one being the amounts of codes to check, usally the more the better but this is up to you.  
-The seconds prompt will ask you for a discord webhook url this is not needed as such but if your running it on a server this is a very good idea.
+The second prompt will ask you for a discord webhook url this is not needed as such but if your running it on a server this is a very good idea.
 
 ## Installation
 The only requement that is currently needed is `discord_webhook` that can be installed using 
