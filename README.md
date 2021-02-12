@@ -7,7 +7,7 @@
 
 # Discord Nitro Generator + Checker
 <p align="center">
-<img src="Screenshot from 2021-02-12 10-07-47.png" />
+<img src="example.png" />
 </p>
 
 ## Usage
