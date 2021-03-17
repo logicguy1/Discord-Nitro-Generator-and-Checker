@@ -29,7 +29,7 @@ py -3 -m pip install discord_webhook
 
 ---
 
-*This code was developed in collaboration with [this discord server](https://discord.gg/AtpBtMUpHK) make sure to check them out*
+*This code was developed in collaboration with [this discord server](https://discord.gg/TMshrBeyHE) make sure to check them out*
 <test>
   
 
