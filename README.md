@@ -5,12 +5,12 @@
 <img src=https://img.shields.io/github/forks/logicguy1/Discord-Nitro-Gen-and-Checker?style=flat-square&logo=appveyor&color=blue />
 </p>
 
-**© 17-3-2021 Drillenissen#4268**
-
 # Discord Nitro Generator + Checker
 <p align="center">
 <img src="example.png" />
 </p>
+
+**© 17-3-2021 Drillenissen#4268**
 
 ## Usage
 Download the project files and run `main.py`  
