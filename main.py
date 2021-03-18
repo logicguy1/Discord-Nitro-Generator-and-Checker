@@ -1,9 +1,19 @@
-from discord_webhook import DiscordWebhook
-import requests
+import os
 import random
 import string
 import time
-import os
+
+try: # Check if the requrements have been installed
+    from discord_webhook import DiscordWebhook # Try to import discord_webhook
+except ImportError: # If it chould not be installed
+    input(f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install discord_webhook'\nPress enter to exit") # Tell the user it has not been installed and how to install it
+    exit() # Exit the program
+try: # Setup try statement to catch the error
+    import requests # Try to import requests
+except ImportError: # If it has not been installed
+    input(f"Module requests not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install requests'\nPress enter to exit")# Tell the user it has not been installed and how to install it
+    exit() # Exit the program
+
 
 class NitroGen: # Initialise the class
     def __init__(self): # The initaliseaiton function
