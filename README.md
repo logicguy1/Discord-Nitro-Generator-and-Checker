@@ -10,7 +10,7 @@
 <img src="example.png" />
 </p>
 
-**© 17-3-2021 Drillenissen#4268**
+**© 2020 Drillenissen#4268**
 
 ## Usage
 Download the project files and run `main.py`  
