@@ -18,13 +18,15 @@ You will be prompted with 2 questions the first one being the amounts of codes t
 The second prompt will ask you for a discord webhook url this is not needed as such but if your running it on a server this is a very good idea.
 
 ## Installation
-The only requement that is currently needed is `discord_webhook` that can be installed using 
+The only requements that are currently needed is `discord_webhook` and `requests` that can be installed using 
 ```
 python3 -m pip install discord_webhook
+python3 -m pip install requests
 ```
 on linux, and on windows it is 
 ```
 py -3 -m pip install discord_webhook
+py -3 -m pip install requests
 ```
 
 ---
