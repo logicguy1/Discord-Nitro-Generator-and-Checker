@@ -10,7 +10,7 @@
 <img src="example.png" />
 </p>
 
-**© 2020 Drillenissen#4268**
+**© 2020 Drillenissen#4268 all rights reserved**
 
 ## Usage
 Download the project files and run `main.py`  
@@ -32,8 +32,3 @@ py -3 -m pip install requests
 ---
 
 *This code was developed in collaboration with [this discord server](https://discord.gg/TMshrBeyHE) make sure to check them out*
-<test>
-  
-
-# Notice
-If, you try to copy and edit our code and try to sell it instant takedown.
