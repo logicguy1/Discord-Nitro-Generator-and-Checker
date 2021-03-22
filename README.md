@@ -12,7 +12,8 @@
 
 **© 2020 Drillenissen#4268 all rights reserved**  
 Remeber to leave a ⭐ that would make my day 😄  
-For additional support join **[My Discord Server](https://discord.gg/TMshrBeyHE)**
+
+#### For additional support join **[My Discord Server](https://discord.gg/TMshrBeyHE)**
 
 ## Usage
 Download the project files and run `main.py`  
