@@ -10,7 +10,7 @@
 <img src="example.png" />
 </p>
 
-**© 2020 Drillenissen#4268 all rights reserved**
+**© 2020 Drillenissen#4268 all rights reserved**  
 Remeber to leave a ⭐ that would make my day 😄
 
 ## Usage
