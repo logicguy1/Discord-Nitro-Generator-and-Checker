@@ -11,7 +11,8 @@
 </p>
 
 **© 2020 Drillenissen#4268 all rights reserved**  
-Remeber to leave a ⭐ that would make my day 😄
+Remeber to leave a ⭐ that would make my day 😄  
+For additional support join **[My Discord Server](https://discord.gg/TMshrBeyHE)**
 
 ## Usage
 Download the project files and run `main.py`  
@@ -29,7 +30,3 @@ on linux, and on windows it is
 py -3 -m pip install discord_webhook
 py -3 -m pip install requests
 ```
-
----
-
-*This code was developed in collaboration with [this discord server](https://discord.gg/TMshrBeyHE) make sure to check them out*
