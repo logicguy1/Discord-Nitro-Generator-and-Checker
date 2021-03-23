@@ -51,7 +51,11 @@ You need to install python, that can be done [here](https://www.python.org)
 ## Usage
 
 Run the `main.py` file using `py -3 main.py` 
-The code will show you two promps the first is how many codes to generate and the second is if you want to use a discord webhook, if you dont know how to get a discord webhook url it is located at `channel settings » intergrations » webhooks » create webhook` if you dont want to use a webhook simply leave this blank
+The code will show you two promps:
+1. How many codes to generate 
+2. If you want to use a discord webhook, if you dont know how to get a discord webhook url it is located at   
+   ```channel settings » intergrations » webhooks » create webhook```
+   if you dont want to use a webhook simply leave this blank  
 
 The code will start generatring and checking after that step
 
