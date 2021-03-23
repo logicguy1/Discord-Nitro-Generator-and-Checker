@@ -1,8 +1,8 @@
 <p align="center">
-<img src=https://img.shields.io/github/issues/logicguy1/The-Cookbook?style=for-the-badge&logo=appveyor&color=informational />
-<img src=https://img.shields.io/github/license/logicguy1/The-Cookbook?style=for-the-badge&logo=appveyor&color=informational />
-<img src=https://img.shields.io/github/stars/logicguy1/The-Cookbook?style=for-the-badge&logo=appveyor&color=blue />
-<img src=https://img.shields.io/github/forks/logicguy1/The-Cookbook?style=for-the-badge&logo=appveyor&color=blue />
+<img src=https://img.shields.io/github/stars/logicguy1/Discord-Nitro-Generator-and-Checker?style=for-the-badge&logo=appveyor&color=blue />
+<img src=https://img.shields.io/github/forks/logicguy1/Discord-Nitro-Generator-and-Checker?style=for-the-badge&logo=appveyor&color=blue />
+<img src=https://img.shields.io/github/issues/logicguy1/Discord-Nitro-Generator-and-Checker?style=for-the-badge&logo=appveyor&color=informational />
+<img src=https://img.shields.io/github/issues-pr/logicguy1/Discord-Nitro-Generator-and-Checker?style=for-the-badge&logo=appveyor&color=informational />
 </p>
 
   <h3 align="center">Discord Nitro Generator and Checker</h3>
