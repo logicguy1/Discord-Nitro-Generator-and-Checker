@@ -123,5 +123,5 @@ Project Link: [https://github.com/logicguy1/The-all-in-one-discord-tool](https:/
 <!-- Statistics -->  
 
 <p>
-<img src=https://komarev.com/ghpvc/?repo=Drillenissen />
+<img src=https://komarev.com/ghpvc/?username=logicguy1 />
 </p>
