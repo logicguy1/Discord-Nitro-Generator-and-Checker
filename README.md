@@ -4,7 +4,12 @@
 <img src=https://img.shields.io/github/issues/logicguy1/Discord-Nitro-Generator-and-Checker?style=for-the-badge&logo=appveyor&color=informational />
 <img src=https://img.shields.io/github/issues-pr/logicguy1/Discord-Nitro-Generator-and-Checker?style=for-the-badge&logo=appveyor&color=informational />
 </p>
-
+<br />
+<p align="center">
+  <a href="https://github.com/othneildrew/Best-README-Template">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+  
   <h3 align="center">Discord Nitro Generator and Checker</h3>
 
   <p align="center">
@@ -19,6 +24,7 @@
       ·
     <a href="https://discord.gg/TMshrBeyHE">Join the discord</a>
   </p>
+</p>
   
 <details open="open">
   <summary>Table of Contents</summary>
