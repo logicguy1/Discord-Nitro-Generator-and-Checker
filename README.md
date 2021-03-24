@@ -110,7 +110,6 @@ Contributions are what make the open source community such an amazing place to b
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
-
 ## Copyright
 
 © 2020 Drillenissen#4268 all rights reserved
@@ -120,3 +119,8 @@ Contributions are what make the open source community such an amazing place to b
 Logicguy - [@Drillenissen#4268](https://www.discordapp.com) - logicguy.mailandcontact@gmail.com
 
 Project Link: [https://github.com/logicguy1/The-all-in-one-discord-tool](https://github.com/logicguy1/The-all-in-one-discord-tool)
+
+<!-- Statistics -->
+<img height=0px src=https://komarev.com/ghpvc/?username=5d612c47-a3f4-48b5-965c-a5dc95492a50-1b0bb07a-1f18-49c4-bfdc-f152d937fcd2
+
+ />
