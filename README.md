@@ -8,7 +8,7 @@
   <h3 align="center">Discord Nitro Generator and Checker</h3>
 
   <p align="center">
-    A discord nitro generator and checker for all your nitroing needs
+    A discord nitro generator and checker for all your nitro needs
     <br />
     <a href="https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker"><strong>Explore the docs »</strong></a>
     <br />
