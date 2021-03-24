@@ -121,6 +121,4 @@ Logicguy - [@Drillenissen#4268](https://www.discordapp.com) - logicguy.mailandco
 Project Link: [https://github.com/logicguy1/The-all-in-one-discord-tool](https://github.com/logicguy1/The-all-in-one-discord-tool)
 
 <!-- Statistics -->
-<img height=0px src=https://komarev.com/ghpvc/?username=5d612c47-a3f4-48b5-965c-a5dc95492a50-1b0bb07a-1f18-49c4-bfdc-f152d937fcd2
-
- />
+<img height=0px src=https://komarev.com/ghpvc/?username=5d612c47-a3f4-48b5-965c-a5dc95492a50-1b0bb07a-1f18-49c4-bfdc-f152d937fcd2 />
