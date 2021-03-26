@@ -84,7 +84,7 @@ You need to install python, that can be done [here](https://www.python.org)
    python3.8 -m pip install discord_webhook
    ```
    
-### Or this can be done using android using unrooted termiux
+#### Or this can be done using android with unrooted termiux
 ```
 git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker
 pkg install python
