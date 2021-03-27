@@ -21,7 +21,10 @@ class NitroGen: # Initialise the class
 
     def main(self): # The main function contains the most important code
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
-        print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True)
+        if os.name == "nt": # If the system is windows
+            os.system("title Nitro Generator and Checker - Made by Drillenissen#4268") # Change the title
+        else: # Or if it is unix
+            print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True) # Update title of command prompt
 
         print(""" █████╗ ███╗   ██╗ ██████╗ ███╗   ██╗██╗██╗  ██╗
 ██╔══██╗████╗  ██║██╔═══██╗████╗  ██║██║╚██╗██╔╝
@@ -61,12 +64,10 @@ class NitroGen: # Initialise the class
             else: # If the code was not valid
                 invalid += 1 # Increase the invalid counter by one
 
-            os.system(f'echo "\033]0; " \a')
-            print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True)
-
-            if result and webhook is None: # If the code was found and the webhook is not setup
-                break # End the script
-
+            if os.name == "nt": # If the system is windows
+                os.system(f"title Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
+            else: # If it is a unix system
+                print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
 
         print(f"""
 Results:
@@ -140,7 +141,7 @@ Results:
         if response.status_code == 200: # If the responce went through
             print(f" Valid | {nitro} ", end="") # Notify the user the code was valid
             with open("Nitro Codes.txt", "w") as file: # Open file to write
-                file.write(nitro)
+                file.write(nitro) # Write the nitro code to the file it will automatically add a newline
 
             if notify is not None: # If a webhook has been added
                 DiscordWebhook( # Send the message to discord letting the user know there has been a valid nitro code
