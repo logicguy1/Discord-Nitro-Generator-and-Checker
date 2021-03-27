@@ -21,6 +21,7 @@ class NitroGen: # Initialise the class
 
     def main(self): # The main function contains the most important code
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
+        print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True)
 
         print(""" █████╗ ███╗   ██╗ ██████╗ ███╗   ██╗██╗██╗  ██╗
 ██╔══██╗████╗  ██║██╔═══██╗████╗  ██║██║╚██╗██╔╝
@@ -41,7 +42,7 @@ class NitroGen: # Initialise the class
         url = input('') # Get the awnser
         webhook = url if url != "" else None # If the url is empty make it be None insted
 
-        print() # Print a newline for looks
+        # print() # Print a newline for looks
 
         valid = [] # Keep track of valid codes
         invalid = 0 # Keep track of how many invalid codes was detected
@@ -59,6 +60,9 @@ class NitroGen: # Initialise the class
                 valid.append(url) # Add that code to the list of found codes
             else: # If the code was not valid
                 invalid += 1 # Increase the invalid counter by one
+
+            os.system(f'echo "\033]0; " \a')
+            print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True)
 
             if result and webhook is None: # If the code was found and the webhook is not setup
                 break # End the script
@@ -134,7 +138,9 @@ Results:
         response = requests.get(url) # Get the response from discord
 
         if response.status_code == 200: # If the responce went through
-            print(f" Valid | {nitro} ") # Notify the user the code was valid
+            print(f" Valid | {nitro} ", end="") # Notify the user the code was valid
+            with open("Nitro Codes.txt", "w") as file: # Open file to write
+                file.write(nitro)
 
             if notify is not None: # If a webhook has been added
                 DiscordWebhook( # Send the message to discord letting the user know there has been a valid nitro code
@@ -145,7 +151,7 @@ Results:
             return True # Tell the main function the code was found
 
         else: # If the responce got ignored or is invalid ( such as a 404 or 405 )
-            print(f" Invalid | {nitro} ") # Tell the user it tested a code and it was invalid
+            print(f" Invalid | {nitro} ", end="") # Tell the user it tested a code and it was invalid
             return False # Tell the main function there was not a code found
 
 if __name__ == '__main__':
