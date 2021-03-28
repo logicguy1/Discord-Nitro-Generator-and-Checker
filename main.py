@@ -141,7 +141,7 @@ Results:
         response = requests.get(url) # Get the response from discord
 
         if response.status_code == 200: # If the responce went through
-            print(f" Valid | {nitro} ", end="") # Notify the user the code was valid
+            print(f" Valid | {nitro} ", end="" if os.name == 'nt' else "\n") # Notify the user the code was valid
             with open("Nitro Codes.txt", "w") as file: # Open file to write
                 file.write(nitro) # Write the nitro code to the file it will automatically add a newline
 
@@ -154,7 +154,7 @@ Results:
             return True # Tell the main function the code was found
 
         else: # If the responce got ignored or is invalid ( such as a 404 or 405 )
-            print(f" Invalid | {nitro} ", end="") # Tell the user it tested a code and it was invalid
+            print(f" Invalid | {nitro} ", end="" if os.name == 'nt' else "\n") # Tell the user it tested a code and it was invalid
             return False # Tell the main function there was not a code found
 
 if __name__ == '__main__':
