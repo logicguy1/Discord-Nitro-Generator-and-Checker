@@ -23,8 +23,8 @@ class NitroGen: # Initialise the class
     def main(self): # The main function contains the most important code
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
         if os.name == "nt": # If the system is windows
-            ctypes.windll.kernel32.SetConsoleTitleA("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the title
             print("")
+            ctypes.windll.kernel32.SetConsoleTitleA("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the 
         else: # Or if it is unix
             print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True) # Update title of command prompt
 
@@ -68,6 +68,7 @@ class NitroGen: # Initialise the class
 
             if os.name == "nt": # If the system is windows
                 ctypes.windll.kernel32.SetConsoleTitleA(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
+                print("")
             else: # If it is a unix system
                 print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
 
@@ -141,7 +142,7 @@ Results:
         response = requests.get(url) # Get the response from discord
 
         if response.status_code == 200: # If the responce went through
-            print(f" Valid | {nitro} ", end="\n" if os.name == 'nt' else "") # Notify the user the code was valid
+            print(f" Valid | {nitro} ", flush=True, end="" if os.name == 'nt' else "\n") # Notify the user the code was valid
             with open("Nitro Codes.txt", "w") as file: # Open file to write
                 file.write(nitro) # Write the nitro code to the file it will automatically add a newline
 
@@ -154,7 +155,7 @@ Results:
             return True # Tell the main function the code was found
 
         else: # If the responce got ignored or is invalid ( such as a 404 or 405 )
-            print(f" Invalid | {nitro} ", end="\n" if os.name == 'nt' else "") # Tell the user it tested a code and it was invalid
+            print(f" Invalid | {nitro} ", flush=True, end="" if os.name == 'nt' else "\n") # Tell the user it tested a code and it was invalid
             return False # Tell the main function there was not a code found
 
 if __name__ == '__main__':
