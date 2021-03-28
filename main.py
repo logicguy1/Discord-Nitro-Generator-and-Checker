@@ -2,6 +2,7 @@ import os
 import random
 import string
 import time
+import ctypes
 
 try: # Check if the requrements have been installed
     from discord_webhook import DiscordWebhook # Try to import discord_webhook
@@ -22,7 +23,7 @@ class NitroGen: # Initialise the class
     def main(self): # The main function contains the most important code
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
         if os.name == "nt": # If the system is windows
-            os.system("title Nitro Generator and Checker - Made by Drillenissen#4268") # Change the title
+            ctypes.windll.kernel32.SetConsoleTitleA("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the title
         else: # Or if it is unix
             print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True) # Update title of command prompt
 
@@ -65,7 +66,7 @@ class NitroGen: # Initialise the class
                 invalid += 1 # Increase the invalid counter by one
 
             if os.name == "nt": # If the system is windows
-                os.system(f"title Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
+                ctypes.windll.kernel32.SetConsoleTitleA(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
             else: # If it is a unix system
                 print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
 
