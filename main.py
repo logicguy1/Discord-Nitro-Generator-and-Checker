@@ -24,6 +24,7 @@ class NitroGen: # Initialise the class
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
         if os.name == "nt": # If the system is windows
             ctypes.windll.kernel32.SetConsoleTitleA("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the title
+            print("")
         else: # Or if it is unix
             print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True) # Update title of command prompt
 
