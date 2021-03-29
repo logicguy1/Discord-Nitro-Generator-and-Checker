@@ -39,9 +39,9 @@ class NitroGen: # Initialise the class
         self.slowType("Made by: Drillenissen#4268 && Benz#4947", .02) # Print who developed the code
         time.sleep(1) # Wait a little more
         self.slowType("\nInput How Many Codes to Generate and Check: ", .02, newLine = False) # Print the first question
-
+        global num # added to track the amount of codes checked
         num = int(input('')) # Ask the user for the amount of codes
-
+        
         # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
         self.slowType("\nDo you wish to use a discord webhook? \nIf so type it here or press enter to ignore: ", .02, newLine = False)
         url = input('') # Get the awnser
@@ -59,7 +59,7 @@ class NitroGen: # Initialise the class
             ))
             url = f"https://discord.gift/{code}" # Generate the url
 
-            result = self.quickChecker(url, webhook) # Check the codes
+            result = self.quickChecker(url, webhook,i) # Check the codes
 
             if result: # If the code was valid
                 valid.append(url) # Add that code to the list of found codes
@@ -136,7 +136,8 @@ Results:
 
         return {"valid" : valid, "invalid" : invalid} # Return a report of the results
 
-    def quickChecker(self, nitro, notify = None): # Used to check a single code at a time
+    def quickChecker(self, nitro, notify = None,count): # Used to check a single code at a time
+        global num
         # Generate the request url
         url = f"https://discordapp.com/api/v6/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
         response = requests.get(url) # Get the response from discord
@@ -155,7 +156,7 @@ Results:
             return True # Tell the main function the code was found
 
         else: # If the responce got ignored or is invalid ( such as a 404 or 405 )
-            print(f" Invalid | {nitro} ", flush=True, end="" if os.name == 'nt' else "\n") # Tell the user it tested a code and it was invalid
+            print(f" Invalid | {nitro} {count}/{num} complete", flush=True, end="" if os.name == 'nt' else "\n") # Tell the user it tested a code and it was invalid
             return False # Tell the main function there was not a code found
 
 if __name__ == '__main__':
