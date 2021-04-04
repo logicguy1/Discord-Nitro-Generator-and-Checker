@@ -24,7 +24,7 @@ class NitroGen: # Initialise the class
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
         if os.name == "nt": # If the system is windows
             print("")
-            ctypes.windll.kernel32.SetConsoleTitleA("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the 
+            ctypes.windll.kernel32.SetConsoleTitleA("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the
         else: # Or if it is unix
             print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True) # Update title of command prompt
 
@@ -53,18 +53,21 @@ class NitroGen: # Initialise the class
         invalid = 0 # Keep track of how many invalid codes was detected
 
         for i in range(num): # Loop over the amount of codes to check
-            code = "".join(random.choices( # Generate the id for the gift
-                string.ascii_uppercase + string.digits + string.ascii_lowercase,
-                k = 16
-            ))
-            url = f"https://discord.gift/{code}" # Generate the url
+            try: # Catch any errors that may happen
+                code = "".join(random.choices( # Generate the id for the gift
+                    string.ascii_uppercase + string.digits + string.ascii_lowercase,
+                    k = 16
+                ))
+                url = f"https://discord.gift/{code}" # Generate the url
 
-            result = self.quickChecker(url, webhook) # Check the codes
+                result = self.quickChecker(url, webhook) # Check the codes
 
-            if result: # If the code was valid
-                valid.append(url) # Add that code to the list of found codes
-            else: # If the code was not valid
-                invalid += 1 # Increase the invalid counter by one
+                if result: # If the code was valid
+                    valid.append(url) # Add that code to the list of found codes
+                else: # If the code was not valid
+                    invalid += 1 # Increase the invalid counter by one
+            except Exception as e: # If the request fails
+                print(f" Error | {url} ") # Tell the user an error occurred
 
             if os.name == "nt": # If the system is windows
                 ctypes.windll.kernel32.SetConsoleTitleA(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
