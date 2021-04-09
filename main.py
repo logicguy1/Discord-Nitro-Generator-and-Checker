@@ -24,7 +24,7 @@ class NitroGen: # Initialise the class
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
         if os.name == "nt": # If the system is windows
             print("")
-            ctypes.windll.kernel32.SetConsoleTitleA("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the
+            ctypes.windll.kernel32.SetConsoleTitleW("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the
         else: # Or if it is unix
             print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True) # Update title of command prompt
 
@@ -70,7 +70,7 @@ class NitroGen: # Initialise the class
                 print(f" Error | {url} ") # Tell the user an error occurred
 
             if os.name == "nt": # If the system is windows
-                ctypes.windll.kernel32.SetConsoleTitleA(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
+                ctypes.windll.kernel32.SetConsoleTitleW(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
                 print("")
             else: # If it is a unix system
                 print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
