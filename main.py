@@ -3,6 +3,7 @@ import random
 import string
 import time
 import ctypes
+import threading
 
 try: # Check if the requrements have been installed
     from discord_webhook import DiscordWebhook # Try to import discord_webhook
@@ -19,6 +20,10 @@ except ImportError: # If it has not been installed
 class NitroGen: # Initialise the class
     def __init__(self): # The initaliseaiton function
         self.fileName = "Nitro Codes.txt" # Set the file name the codes are stored in
+        self.valid = [] # Keep track of valid codes
+        self.invalid = 0 # Keep track of how many invalid codes was detected
+        self.requestsPerThread = 100
+        self.webhook = None
 
     def main(self): # The main function contains the most important code
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
@@ -45,41 +50,23 @@ class NitroGen: # Initialise the class
         # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
         self.slowType("\nDo you wish to use a discord webhook? \nIf so type it here or press enter to ignore: ", .02, newLine = False)
         url = input('') # Get the awnser
-        webhook = url if url != "" else None # If the url is empty make it be None insted
+        self.webhook = url if url != "" else None # If the url is empty make it be None insted
 
         # print() # Print a newline for looks
 
-        valid = [] # Keep track of valid codes
-        invalid = 0 # Keep track of how many invalid codes was detected
+        threadingLoop = int(num / self.requestsPerThread)
 
-        for i in range(num): # Loop over the amount of codes to check
-            try: # Catch any errors that may happen
-                code = "".join(random.choices( # Generate the id for the gift
-                    string.ascii_uppercase + string.digits + string.ascii_lowercase,
-                    k = 16
-                ))
-                url = f"https://discord.gift/{code}" # Generate the url
+        if threadingLoop == 0:
+            threadingLoop = 1
 
-                result = self.quickChecker(url, webhook) # Check the codes
-
-                if result: # If the code was valid
-                    valid.append(url) # Add that code to the list of found codes
-                else: # If the code was not valid
-                    invalid += 1 # Increase the invalid counter by one
-            except Exception as e: # If the request fails
-                print(f" Error | {url} ") # Tell the user an error occurred
-
-            if os.name == "nt": # If the system is windows
-                ctypes.windll.kernel32.SetConsoleTitleW(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
-                print("")
-            else: # If it is a unix system
-                print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
+        for _ in range(threadingLoop):
+            threading.Thread(target=self.threadingFunction).start()
 
         print(f"""
 Results:
- Valid: {len(valid)}
- Invalid: {invalid}
- Valid Codes: {', '.join(valid )}""") # Give a report of the results of the check
+ Valid: {len(self.valid)}
+ Invalid: {self.invalid}
+ Valid Codes: {', '.join(self.valid )}""") # Give a report of the results of the check
 
         input("\nThe end! Press Enter 5 times to close the program.") # Tell the user the program finished
         [input(i) for i in range(4,0,-1)] # Wait for 4 enter presses
@@ -98,7 +85,7 @@ Results:
 
             start = time.time() # Note the initaliseation time
 
-            for i in range(amount): # Loop the amount of codes to generate
+            for _ in range(amount): # Loop the amount of codes to generate
                 code = "".join(random.choices(
                     string.ascii_uppercase + string.digits + string.ascii_lowercase,
                     k = 16
@@ -160,6 +147,30 @@ Results:
         else: # If the responce got ignored or is invalid ( such as a 404 or 405 )
             print(f" Invalid | {nitro} ", flush=True, end="" if os.name == 'nt' else "\n") # Tell the user it tested a code and it was invalid
             return False # Tell the main function there was not a code found
+
+    def threadingFunction(self):
+        for _ in range(self.requestsPerThread):
+            try: # Catch any errors that may happen
+                code = "".join(random.choices( # Generate the id for the gift
+                    string.ascii_uppercase + string.digits + string.ascii_lowercase,
+                    k = 16
+                ))
+                url = f"https://discord.gift/{code}" # Generate the url
+
+                result = self.quickChecker(url, self.webhook) # Check the codes
+
+                if result: # If the code was valid
+                    self.valid.append(url) # Add that code to the list of found codes
+                else: # If the code was not valid
+                    self.invalid += 1 # Increase the invalid counter by one
+            except Exception as e: # If the request fails
+                print(f" Error | {url} ") # Tell the user an error occurred
+
+            if os.name == "nt": # If the system is windows
+                ctypes.windll.kernel32.SetConsoleTitleW(f"Nitro Generator and Checker - {len(self.valid)} Valid | {self.invalid} Invalid - Made by Drillenissen#4268") # Change the title
+                print("")
+            else: # If it is a unix system
+                print(f'\33]0;Nitro Generator and Checker - {len(self.valid)} Valid | {self.invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
 
 if __name__ == '__main__':
     Gen = NitroGen() # Create the nitro generator object
