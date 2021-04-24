@@ -22,7 +22,7 @@
     ·
     <a href="https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker/issues">Request Feature</a>
       ·
-    <a href="https://discord.gg/TMshrBeyHE">Join the discord</a>
+    <a href="https://discord.gg/rchHUU9aGk">Join the discord</a>
   </p>
 </p>
   
