@@ -54,7 +54,7 @@
 
 <img src="assets/example.png" alt="Image of product">
 
-It generates and checks discord nitro codes at the same time for maximum efficancy
+It generates and checks discord nitro codes at the same time for maximum efficiency
 
 ### Built With
 
@@ -66,7 +66,7 @@ It generates and checks discord nitro codes at the same time for maximum effican
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-You need to install python, that can be done [here](https://www.python.org)
+You need to install Python, that can be done [here](https://www.python.org)
 
 ### Installation
 1. Clone the repo
@@ -84,7 +84,7 @@ You need to install python, that can be done [here](https://www.python.org)
    python3.8 -m pip install discord_webhook
    ```
    
-#### Or this can be done using android with unrooted termiux
+#### Or this can be done using android with unrooted Termux
 ```
 git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker
 pkg install python
@@ -97,13 +97,13 @@ python3 main.py
 ## Usage
 
 Run the `main.py` file using `py -3 main.py` 
-The code will show you two promps:
+The code will show you two prompts:
 1. How many codes to generate 
 2. If you want to use a discord webhook, if you dont know how to get a discord webhook url it is located at   
    ```channel settings » intergrations » webhooks » create webhook```  
-   if you dont want to use a webhook simply leave this blank  
+   If you dont want to use a webhook simply leave this blank  
 
-The code will start generatring and checking after that step
+The code will start generating and checking after that step
 
 _For more examples, please refer to the [Documentation](https://example.com)_
 
@@ -113,7 +113,7 @@ See the [open issues](https://github.com/logicguy1/Discord-Nitro-Generator-and-C
 
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
