@@ -60,6 +60,7 @@ It generates and checks discord nitro codes at the same time for maximum efficie
 
 * [Requests](https://github.com/psf/requests)
 * [Discord webhook](https://github.com/lovvskillz/python-discord-webhook)
+* [Colored](https://gitlab.com/dslackw/colored)
 
 ## Getting Started
 
@@ -78,10 +79,12 @@ You need to install Python, that can be done [here](https://www.python.org)
    # Windows:
    py -3 -m pip install requests
    py -3 -m pip install discord_webhook
+   py -3 -m pip install colored
    
    # Unix
    python3.8 -m pip install requests
    python3.8 -m pip install discord_webhook
+   python3.8 -m pip install colored
    ```
    
 #### Or this can be done using android with unrooted Termux
