@@ -8,12 +8,12 @@ import time
 import ctypes
 import threading
 from sys import executable
-from colorama import Fore, Style
 
 
 try:  # Try to import modules
-    from discord_webhook import DiscordWebhook
     import requests
+    from discord_webhook import DiscordWebhook
+    from colorama import Fore, Style
 except ImportError:  # Ask user to install if there was an error
     install = input(
         'It looks like you don\'t have all dependencies installed, would you like to install them? [Y/N] ')
