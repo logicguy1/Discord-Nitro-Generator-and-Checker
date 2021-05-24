@@ -85,7 +85,7 @@ You need to install Python (3.6 or higher), that can be done [here](https://www.
    # Unix
    python3 -m pip install requests
    python3 -m pip install discord_webhook
-   python3 -m pip install colored
+   python3 -m pip install colorama
    ```
 
   #### Or this can be done on Android with unrooted Termux
