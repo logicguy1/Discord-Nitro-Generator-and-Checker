@@ -77,22 +77,17 @@ You need to install Python, that can be done [here](https://www.python.org)
 2. Install Python packages
    ```sh
    # Windows:
-   py -3 -m pip install requests
-   py -3 -m pip install discord_webhook
-   py -3 -m pip install colored
+   py -3 -m pip install -r requirements.txt
    
    # Unix
-   python3.8 -m pip install requests
-   python3.8 -m pip install discord_webhook
-   python3.8 -m pip install colored
+   python3.8 -m pip install -r requirements.txt
    ```
    
 #### Or this can be done using android with unrooted Termux
 ```
 git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker
 pkg install python
-pip install discord_webhooks
-pip install requests
+pip install -r requirements.txt
 cd Discord-Nitro-Generator-and-Checker
 python3 main.py
 ```
