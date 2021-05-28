@@ -13,7 +13,7 @@
   <h3 align="center">Discord Nitro Generator and Checker</h3>
 
   <p align="center">
-    A discord nitro generator and checker for all your nitro needs
+    A Discord Nitro generator and checker for all your nitro needs
     <br />
     <a href="https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker"><strong>Explore the docs »</strong></a>
     <br />
@@ -22,10 +22,10 @@
     ·
     <a href="https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker/issues">Request Feature</a>
       ·
-    <a href="https://discord.gg/rchHUU9aGk">Join the discord</a>
+    <a href="https://discord.gg/rchHUU9aGk">Join the Discord</a>
   </p>
 </p>
-  
+
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -54,56 +54,60 @@
 
 <img src="assets/example.png" alt="Image of product">
 
-It generates and checks discord nitro codes at the same time for maximum efficiency
+Generates and check Nitro codes at the same time for maximum efficiency
 
 ### Built With
 
 * [Requests](https://github.com/psf/requests)
 * [Discord webhook](https://github.com/lovvskillz/python-discord-webhook)
-* [Colored](https://gitlab.com/dslackw/colored)
+* [Colorama](https://github.com/tartley/colorama)
 
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-You need to install Python, that can be done [here](https://www.python.org)
+You need to install Python (3.6 or higher), that can be done [here](https://www.python.org/downloads/)
 
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/logicguy1/The-all-in-one-discord-tool.git
+   git clone https://github.com/Music-Dude/Discord-Nitro-Generator-and-Checker.git
    ```
 2. Install Python packages
+   ##### The program will give you an option to install them, but you can install them manually too.
    ```sh
    # Windows:
-   py -3 -m pip install -r requirements.txt
+   py -3 -m pip install requests discord_webhook colorama
    
    # Unix
-   python3.8 -m pip install -r requirements.txt
+   python3 -m pip install requests
+   python3 -m pip install discord_webhook
+   python3 -m pip install colorama
    ```
-   
-#### Or this can be done using android with unrooted Termux
-```
-git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker
-pkg install python
-pip install -r requirements.txt
-cd Discord-Nitro-Generator-and-Checker
-python3 main.py
-```
-   
+
+  #### Or this can be done on Android with unrooted Termux
+  ```
+  git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker
+  pkg install python
+  python3 -m pip install requests discord_webhook colorama
+  cd Discord-Nitro-Generator-and-Checker
+  python3 main.py
+  ```
+  
 ## Usage
 
-Run the `main.py` file using `py -3 main.py` 
-The code will show you two prompts:
-1. How many codes to generate 
-2. If you want to use a discord webhook, if you dont know how to get a discord webhook url it is located at   
+Run the file [`main.py`](/main.py) using `py -3 main.py`, or `python3 main.py` on Unix.
+The code will show you three prompts:
+1. How many codes to generate, input 0 to generate without a limit.
+2. If you want to use a Discord webhook to report valid codes. You can find a webhook URL at
    ```channel settings » intergrations » webhooks » create webhook```  
-   If you dont want to use a webhook simply leave this blank  
+3. How many threads to run. More threads will increase efficiency in generation, but also use more CPU.
 
-The code will start generating and checking after that step
+\
+After this, the program will begin generating and checking Nitro codes.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+For more examples, please refer to the [Documentation](https://example.com)
 
 ## Roadmap
 
@@ -114,9 +118,9 @@ See the [open issues](https://github.com/logicguy1/Discord-Nitro-Generator-and-C
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
+2. Create your Feature Branch `git checkout -b feature/AmazingFeature`
+3. Commit your Changes `git commit -m 'Add some AmazingFeature'`
+4. Push to the Branch `git push origin feature/AmazingFeature`
 5. Open a Pull Request
 ## Copyright
 
@@ -126,7 +130,7 @@ Contributions are what make the open source community such an amazing place to l
 
 Logicguy - [@Drillenissen#4268](https://www.discordapp.com) - logicguy.mailandcontact@gmail.com
 
-Project Link: [https://github.com/logicguy1/The-all-in-one-discord-tool](https://github.com/logicguy1/The-all-in-one-discord-tool)
+Project Link: https://github.com/logicguy1/The-all-in-one-discord-tool
 
 <!-- Statistics -->  
 
