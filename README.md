@@ -67,7 +67,7 @@ Generates and check Nitro codes at the same time for maximum efficiency
 To get a local copy up and running follow these simple steps.
 
 ### Prerequisites
-You need to install Python (3.6 or higher), that can be done [here](https://www.python.org)
+You need to install Python (3.6 or higher), that can be done [here](https://www.python.org/downloads/)
 
 ### Installation
 1. Clone the repo
@@ -78,9 +78,7 @@ You need to install Python (3.6 or higher), that can be done [here](https://www.
    ##### The program will give you an option to install them, but you can install them manually too.
    ```sh
    # Windows:
-   py -3 -m pip install requests
-   py -3 -m pip install discord_webhook
-   py -3 -m pip install colored
+   py -3 -m pip install requests discord_webhook colorama
    
    # Unix
    python3 -m pip install requests
@@ -92,8 +90,7 @@ You need to install Python (3.6 or higher), that can be done [here](https://www.
   ```
   git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker
   pkg install python
-  pip install discord_webhooks
-  pip install requests
+  python3 -m pip install requests discord_webhook colorama
   cd Discord-Nitro-Generator-and-Checker
   python3 main.py
   ```
