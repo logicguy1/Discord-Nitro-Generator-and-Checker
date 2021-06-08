@@ -72,7 +72,7 @@ You need to install Python, that can be done [here](https://www.python.org)
 ### Installation
 1. Clone the repo
    ```sh
-   git clone https://github.com/logicguy1/The-all-in-one-discord-tool.git
+   git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker.git
    ```
 2. Install Python packages
    ```sh
@@ -126,7 +126,7 @@ Contributions are what make the open source community such an amazing place to l
 
 Logicguy - [@Drillenissen#4268](https://www.discordapp.com) - logicguy.mailandcontact@gmail.com
 
-Project Link: [https://github.com/logicguy1/The-all-in-one-discord-tool](https://github.com/logicguy1/The-all-in-one-discord-tool)
+Project Link: [https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker](https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker)
 
 <!-- Statistics -->  
 
