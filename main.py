@@ -1,3 +1,4 @@
+# pull by ahoodatheguy
 import os
 import random
 import string
@@ -38,9 +39,25 @@ class NitroGen: # Initialise the class
         time.sleep(2) # Wait a few seconds
         self.slowType("Made by: Drillenissen#4268 && Benz#4947", .02) # Print who developed the code
         time.sleep(1) # Wait a little more
-        self.slowType("\nInput How Many Codes to Generate and Check: ", .02, newLine = False) # Print the first question
+        self.slowType("\nRun until valid code is found? y/n ", .02, newLine = False)
+        infinite_choice = input('')
+        print_until_valid = None
+        num = None
 
-        num = int(input('')) # Ask the user for the amount of codes
+        if infinite_choice == "y" or infinite_choice == "Y":
+            self.slowType("\nRunning until valid code is found", .02, newLine=False)
+            print_until_valid = True
+        elif infinite_choice == "n" or infinite_choice == "N":
+            print_until_valid = False
+            time.sleep(1)
+            self.slowType("\nInput How Many Codes to Generate and Check: ", .02, newLine = False) # Print the first question
+            num = int(input('')) # Ask the user for the amount of codes
+        else:
+            self.slowType("\nUnknown input, defaulting to no.", .02, newLine = False)
+            print_until_valid = False
+            self.slowType("\nInput How Many Codes to Generate and Check: ", .02, newLine = False) # Print the first question
+            num = int(input('')) # Ask the user for the amount of codes
+
 
         # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
         self.slowType("\nDo you wish to use a discord webhook? \nIf so type it here or press enter to ignore: ", .02, newLine = False)
@@ -52,37 +69,59 @@ class NitroGen: # Initialise the class
         valid = [] # Keep track of valid codes
         invalid = 0 # Keep track of how many invalid codes was detected
 
-        for i in range(num): # Loop over the amount of codes to check
-            try: # Catch any errors that may happen
-                code = "".join(random.choices( # Generate the id for the gift
-                    string.ascii_uppercase + string.digits + string.ascii_lowercase,
-                    k = 16
-                ))
-                url = f"https://discord.gift/{code}" # Generate the url
+        if print_until_valid == False:
+            for i in range(num): # Loop over the amount of codes to check
+                try: # Catch any errors that may happen
+                    code = "".join(random.choices( # Generate the id for the gift
+                        string.ascii_uppercase + string.digits + string.ascii_lowercase,
+                        k = 16
+                    ))
+                    url = f"https://discord.gift/{code}" # Generate the url
 
-                result = self.quickChecker(url, webhook) # Check the codes
+                    result = self.quickChecker(url, webhook) # Check the codes
 
-                if result: # If the code was valid
-                    valid.append(url) # Add that code to the list of found codes
-                else: # If the code was not valid
-                    invalid += 1 # Increase the invalid counter by one
-            except Exception as e: # If the request fails
-                print(f" Error | {url} ") # Tell the user an error occurred
+                    if result: # If the code was valid
+                        valid.append(url) # Add that code to the list of found codes
+                    else: # If the code was not valid
+                        invalid += 1 # Increase the invalid counter by one
+                except Exception as e: # If the request fails
+                    print(f" Error | {url} ") # Tell the user an error occurred
 
-            if os.name == "nt": # If the system is windows
-                ctypes.windll.kernel32.SetConsoleTitleW(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
-                print("")
-            else: # If it is a unix system
-                print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
+                if os.name == "nt": # If the system is windows
+                    ctypes.windll.kernel32.SetConsoleTitleW(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
+                    print("")
+                else: # If it is a unix system
+                    print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
+            print(f"""
+    Results:
+    Valid: {len(valid)}
+    Invalid: {invalid}
+    Valid Codes: {', '.join(valid )}""") # Give a report of the results of the check
 
-        print(f"""
-Results:
- Valid: {len(valid)}
- Invalid: {invalid}
- Valid Codes: {', '.join(valid )}""") # Give a report of the results of the check
+            input("\nThe end! Press Enter 5 times to close the program.") # Tell the user the program finished
+            [input(i) for i in range(4,0,-1)] # Wait for 4 enter presses
+        else:
+            running_gen = True
+            while running_gen:
+                try:
+                    code = "".join(random.choices( # Generate the id for the gift
+                        string.ascii_uppercase + string.digits + string.ascii_lowercase,
+                        k = 16
+                    ))
+                    url = f"https://discord.gift/{code}" # Generate the url
 
-        input("\nThe end! Press Enter 5 times to close the program.") # Tell the user the program finished
-        [input(i) for i in range(4,0,-1)] # Wait for 4 enter presses
+                    result = self.quickChecker(url, webhook) # Check the codes
+
+                    if result: # If the code was valid
+                        self.slowType("\nValid code found: ", .02, newLine=False)
+                        self.slowType(url, .02, newLine=False)
+                        input("\nThe end! Press Enter 5 times to close the program.") # Tell the user the program finished
+                        [input(i) for i in range(4,0,-1)]
+                        exit()
+
+                except Exception as e: # If the request fails
+                    print(f" Error | {url} ") # Tell the user an error occurre
+
 
 
     def slowType(self, text, speed, newLine = True): # Function used to print text a little more fancier
