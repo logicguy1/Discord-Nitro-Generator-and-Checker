@@ -9,11 +9,13 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 """
 
 import time
+import os
+
 print(LICNECE)
+
 time.sleep(3)
 os.system('cls' if os.name == 'nt' else 'clear')
 
-import os
 import random
 import string
 import ctypes
