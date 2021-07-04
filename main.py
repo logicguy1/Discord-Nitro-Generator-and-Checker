@@ -52,7 +52,7 @@ class NitroGen: # Initialise the class
 ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝
                                                         """) # Print the title card
         time.sleep(2) # Wait a few seconds
-        self.slowType("Made by: Drillenissen#4268 && Benz#4947", .02) # Print who developed the code
+        self.slowType("Made by: Drillenissen#4268 && Benz#8295", .02) # Print who developed the code
         time.sleep(1) # Wait a little more
         self.slowType("\nInput How Many Codes to Generate and Check: ", .02, newLine = False) # Print the first question
 
