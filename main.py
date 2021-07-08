@@ -13,7 +13,7 @@ import os
 
 print(LICENSE)
 
-time.sleep(3)
+time.sleep(1.7)
 os.system('cls' if os.name == 'nt' else 'clear')
 
 import random
@@ -51,15 +51,15 @@ class NitroGen: # Initialise the class
 ██║  ██║██║ ╚████║╚██████╔╝██║ ╚████║██║██╔╝ ██╗
 ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝
                                                         """) # Print the title card
-        time.sleep(2) # Wait a few seconds
-        self.slowType("Made by: Drillenissen#4268 & Benz#8295", .015) # Print who developed the code
-        time.sleep(1) # Wait a little more
+        time.sleep(1.3) # Wait a few seconds
+        self.slowType("Made by: Drillenissen#4268 & Benz#8295", .013) # Print who developed the code
+        time.sleep(0.75) # Wait a little more
 
-        self.slowType("\nInput How Many Codes to Generate and Check: ", .015, newLine = False) # Print the first question
+        self.slowType("\nInput How Many Codes to Generate and Check: ", .013, newLine = False) # Print the first question
         num = int(input('')) # Ask the user for the amount of codes
 
         # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
-        self.slowType("\nDo you want to use a discord webhook? \nIf so type it here or press enter to ignore: ", .015, newLine = False)
+        self.slowType("\nDo you want to use a discord webhook? \nType it here or press enter to ignore: ", .01, newLine = False)
         url = input('') # Get the answer
         webhook = url if url != "" else None # If the url is empty make it be None insted
 
