@@ -40,9 +40,9 @@ class NitroGen: # Initialise the class
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
         if os.name == "nt": # If the system is windows
             print("")
-            ctypes.windll.kernel32.SetConsoleTitleW("Nitro Generator and Checker - Made by Drillenissen#8295 & Benz#8295") # Change the
+            ctypes.windll.kernel32.SetConsoleTitleW("Nitro Generator and Checker - Made by Drillenissen#4268 & Benz#8295") # Change the
         else: # Or if it is unix
-            print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#8295 & Benz#8295\a', end='', flush=True) # Update title of command prompt
+            print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268 & Benz#8295\a', end='', flush=True) # Update title of command prompt
 
         print(""" █████╗ ███╗   ██╗ ██████╗ ███╗   ██╗██╗██╗  ██╗
 ██╔══██╗████╗  ██║██╔═══██╗████╗  ██║██║╚██╗██╔╝
@@ -57,7 +57,7 @@ class NitroGen: # Initialise the class
 
         self.slowType("\nInput How Many Codes to Generate and Check: ", .015, newLine = False) # Print the first question
         num = int(input('')) # Ask the user for the amount of codes
-        
+
         # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
         self.slowType("\nDo you want to use a discord webhook? \nIf so type it here or press enter to ignore: ", .015, newLine = False)
         url = input('') # Get the answer
