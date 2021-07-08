@@ -1,4 +1,4 @@
-LICNECE = """
+LICENSE = """
 Copyright © 2021 Drillenissen#4268
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -11,9 +11,9 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 import time
 import os
 
-print(LICNECE)
+print(LICENSE)
 
-time.sleep(3)
+time.sleep(1.7)
 os.system('cls' if os.name == 'nt' else 'clear')
 
 import random
@@ -23,12 +23,12 @@ import ctypes
 try: # Check if the requrements have been installed
     from discord_webhook import DiscordWebhook # Try to import discord_webhook
 except ImportError: # If it chould not be installed
-    input(f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install discord_webhook'\nPress enter to exit") # Tell the user it has not been installed and how to install it
+    input(f"Module discord_webhook not installed, to install run '{'python3' if os.name == 'nt' else 'python3.9'} -m pip install discord_webhook'\nPress enter to exit") # Tell the user it has not been installed and how to install it
     exit() # Exit the program
 try: # Setup try statement to catch the error
     import requests # Try to import requests
 except ImportError: # If it has not been installed
-    input(f"Module requests not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install requests'\nPress enter to exit")# Tell the user it has not been installed and how to install it
+    input(f"Module requests not installed, to install run '{'python3' if os.name == 'nt' else 'python3.9'} -m pip install requests'\nPress enter to exit")# Tell the user it has not been installed and how to install it
     exit() # Exit the program
 
 
@@ -40,9 +40,9 @@ class NitroGen: # Initialise the class
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
         if os.name == "nt": # If the system is windows
             print("")
-            ctypes.windll.kernel32.SetConsoleTitleW("Nitro Generator and Checker - Made by Drillenissen#4268") # Change the
+            ctypes.windll.kernel32.SetConsoleTitleW("Nitro Generator and Checker - Made by Drillenissen#4268 & Benz#8295") # Change the
         else: # Or if it is unix
-            print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268\a', end='', flush=True) # Update title of command prompt
+            print(f'\33]0;Nitro Generator and Checker - Made by Drillenissen#4268 & Benz#8295\a', end='', flush=True) # Update title of command prompt
 
         print(""" █████╗ ███╗   ██╗ ██████╗ ███╗   ██╗██╗██╗  ██╗
 ██╔══██╗████╗  ██║██╔═══██╗████╗  ██║██║╚██╗██╔╝
@@ -51,16 +51,16 @@ class NitroGen: # Initialise the class
 ██║  ██║██║ ╚████║╚██████╔╝██║ ╚████║██║██╔╝ ██╗
 ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝╚═╝  ╚═╝
                                                         """) # Print the title card
-        time.sleep(2) # Wait a few seconds
-        self.slowType("Made by: Drillenissen#4268 && Benz#8295", .02) # Print who developed the code
-        time.sleep(1) # Wait a little more
-        self.slowType("\nInput How Many Codes to Generate and Check: ", .02, newLine = False) # Print the first question
+        time.sleep(1.3) # Wait a few seconds
+        self.slowType("Made by: Drillenissen#4268 & Benz#8295", .013) # Print who developed the code
+        time.sleep(0.75) # Wait a little more
 
+        self.slowType("\nInput How Many Codes to Generate and Check: ", .013, newLine = False) # Print the first question
         num = int(input('')) # Ask the user for the amount of codes
 
         # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
-        self.slowType("\nDo you wish to use a discord webhook? \nIf so type it here or press enter to ignore: ", .02, newLine = False)
-        url = input('') # Get the awnser
+        self.slowType("\nDo you want to use a discord webhook? \nType it here or press enter to ignore: ", .01, newLine = False)
+        url = input('') # Get the answer
         webhook = url if url != "" else None # If the url is empty make it be None insted
 
         # print() # Print a newline for looks
@@ -86,10 +86,10 @@ class NitroGen: # Initialise the class
                 print(f" Error | {url} ") # Tell the user an error occurred
 
             if os.name == "nt": # If the system is windows
-                ctypes.windll.kernel32.SetConsoleTitleW(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268") # Change the title
+                ctypes.windll.kernel32.SetConsoleTitleW(f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268 & Benz#8295") # Change the title
                 print("")
             else: # If it is a unix system
-                print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268\a', end='', flush=True) # Change the title
+                print(f'\33]0;Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268 & Benz#8295\a', end='', flush=True) # Change the title
 
         print(f"""
 Results:
@@ -123,7 +123,7 @@ Results:
                 file.write(f"https://discord.gift/{code}\n") # Write the code
 
             # Tell the user its done generating and how long tome it took
-            print(f"Genned {amount} codes | Time taken: {round(time.time() - start, 5)}s\n") #
+            print(f"Generated {amount} codes | Time taken: {round(time.time() - start, 5)}s\n") #
 
     def fileChecker(self, notify = None): # Function used to check nitro codes from a file
         valid = [] # A list of the valid codes
@@ -133,7 +133,7 @@ Results:
                 nitro = line.strip("\n") # Remove the newline at the end of the nitro code
 
                 # Create the requests url for later use
-                url = f"https://discordapp.com/api/v6/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
+                url = f"https://discordapp.com/api/v8/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
 
                 response = requests.get(url) # Get the responce from the url
 
@@ -144,7 +144,7 @@ Results:
                     if notify is not None: # If a webhook has been added
                         DiscordWebhook( # Send the message to discord letting the user know there has been a valid nitro code
                             url = notify,
-                            content = f"Valid Nito Code detected! @everyone \n{nitro}"
+                            content = f"Valid Nitro Code detected! @everyone \n{nitro}"
                         ).execute()
                     else: # If there has not been a discord webhook setup just stop the code
                         break # Stop the loop since a valid code was found
@@ -157,7 +157,7 @@ Results:
 
     def quickChecker(self, nitro, notify = None): # Used to check a single code at a time
         # Generate the request url
-        url = f"https://discordapp.com/api/v6/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
+        url = f"https://discordapp.com/api/v8/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
         response = requests.get(url) # Get the response from discord
 
         if response.status_code == 200: # If the responce went through
@@ -168,7 +168,7 @@ Results:
             if notify is not None: # If a webhook has been added
                 DiscordWebhook( # Send the message to discord letting the user know there has been a valid nitro code
                     url = notify,
-                    content = f"Valid Nito Code detected! @everyone \n{nitro}"
+                    content = f"Valid Nitro Code detected! @everyone \n{nitro}"
                 ).execute()
 
             return True # Tell the main function the code was found

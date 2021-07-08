@@ -77,10 +77,12 @@ You need to install Python, that can be done [here](https://www.python.org)
 2. Install Python packages
    ```sh
    # Windows:
-   py -3 -m pip install -r requirements.txt
+   python3 -m pip install -r requirements.txt
+   or
+   run install_modules.bat
    
    # Unix
-   python3.8 -m pip install -r requirements.txt
+   python3.9 -m pip install -r requirements.txt
    ```
    
 #### Or this can be done using android with unrooted Termux
@@ -131,6 +133,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 ## Contact
 
 Logicguy - [@Drillenissen#4268](https://www.discordapp.com) - logicguy.mailandcontact@gmail.com
+Also helped Fisheiyy [Fisheiyy.exe#7683](https://www.discordapp.com) - imananimoose@gmail.com
 
 Project Link: [https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker](https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker)
 
