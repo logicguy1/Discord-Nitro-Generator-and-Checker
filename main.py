@@ -1,4 +1,4 @@
-LICNECE = """
+LICENSE = """
 Copyright © 2021 Drillenissen#4268
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
@@ -11,7 +11,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 import time
 import os
 
-print(LICNECE)
+print(LICENSE)
 
 time.sleep(3)
 os.system('cls' if os.name == 'nt' else 'clear')
@@ -133,7 +133,7 @@ Results:
                 nitro = line.strip("\n") # Remove the newline at the end of the nitro code
 
                 # Create the requests url for later use
-                url = f"https://discordapp.com/api/v6/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
+                url = f"https://discordapp.com/api/v8/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
 
                 response = requests.get(url) # Get the responce from the url
 
@@ -157,7 +157,7 @@ Results:
 
     def quickChecker(self, nitro, notify = None): # Used to check a single code at a time
         # Generate the request url
-        url = f"https://discordapp.com/api/v6/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
+        url = f"https://discordapp.com/api/v8/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
         response = requests.get(url) # Get the response from discord
 
         if response.status_code == 200: # If the responce went through
@@ -168,7 +168,7 @@ Results:
             if notify is not None: # If a webhook has been added
                 DiscordWebhook( # Send the message to discord letting the user know there has been a valid nitro code
                     url = notify,
-                    content = f"Valid Nito Code detected! @everyone \n{nitro}"
+                    content = f"Valid Nitro Code detected! @everyone \n{nitro}"
                 ).execute()
 
             return True # Tell the main function the code was found
