@@ -133,7 +133,7 @@ Results:
                 nitro = line.strip("\n") # Remove the newline at the end of the nitro code
 
                 # Create the requests url for later use
-                url = f"https://discordapp.com/api/v6/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
+                url = f"https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
 
                 response = requests.get(url) # Get the responce from the url
 
@@ -157,7 +157,7 @@ Results:
 
     def quickChecker(self, nitro, notify = None): # Used to check a single code at a time
         # Generate the request url
-        url = f"https://discordapp.com/api/v6/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
+        url = f"https://discordapp.com/api/v9/entitlements/gift-codes/{nitro}?with_application=false&with_subscription_plan=true"
         response = requests.get(url) # Get the response from discord
 
         if response.status_code == 200: # If the responce went through
