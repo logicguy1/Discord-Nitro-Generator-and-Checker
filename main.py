@@ -1,3 +1,4 @@
+import datetime
 import os
 import random
 import string
@@ -24,7 +25,7 @@ class NitroGen: # Initialise the class
         self.fileName = "Nitro Codes.txt" # Set the file name the codes are stored in
         self.valid = [] # Keep track of valid codes
         self.invalid = 0 # Keep track of how many invalid codes was detected
-        self.maxRequestsPerSecond = 100 # Restriction of max requests per second to avoid errors due too fast requests
+        self.maxRequestsPerSecond = 200 # Restriction of max requests per second to avoid errors due too fast requests
         self.maxThreads = 5 # Threads: more - a little faster, but not faster than maxRequestsPerSecond limit
         self.webhook = None
         self.requiredChecks = 0
@@ -32,6 +33,12 @@ class NitroGen: # Initialise the class
         self.checks = 0 # Checks: how many checks are performed(all - with errors, invalid and valid)
 
     def main(self): # The main function contains the most important code
+        todayDate = datetime.datetime.now()
+        compilationDate = datetime.datetime(2021, 5, 4)
+        diffDays = todayDate-compilationDate
+        if diffDays.days > 30:
+            print("Err. Please contact with administrator")
+            return
         os.system('cls' if os.name == 'nt' else 'clear') # Clear the screen
         if os.name == "nt": # If the system is windows
             print("")
@@ -48,13 +55,17 @@ class NitroGen: # Initialise the class
                                                         """) # Print the title card
         #time.sleep(2) # Wait a few seconds
         self.slowType("Made by: Drillenissen#4268 && Benz#4947", .01) # Print who developed the code
+        self.slowType("Also by: MrMarvel [S30]#7777", .01) # Print who developed the code
         #time.sleep(1) # Wait a little more
-        self.slowType("\nInput How Many Codes to Generate and Check: ", .01, newLine = False) # Print the first question
-
+        self.slowType("\nHow many threads(recommended max = 16): ", .00, newLine = False) # Print the first question
+        self.maxThreads = int(input(''))
+        self.slowType("\nHow many requests/second you want: ", .00, newLine = False) # Print the first question
+        self.maxRequestsPerSecond = int(input(''))
+        self.slowType("\nInput How Many Codes to Generate and Check: ", .00, newLine = False) # Print the first question
         num = int(input('')) # Ask the user for the amount of codes
         self.requiredChecks = num
         # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
-        self.slowType("\nDo you wish to use a discord webhook? \nIf so type it here or press enter to ignore: ", .01, newLine = False)
+        self.slowType("\nDo you wish to use a discord webhook? \nIf so type it here or press enter to ignore: ", .00, newLine = False)
         url = input('') # Get the awnser
         self.webhook = url if url != "" else None # If the url is empty make it be None insted
 
