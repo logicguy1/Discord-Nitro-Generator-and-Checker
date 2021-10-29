@@ -82,6 +82,11 @@ class NitroGen: # Initialise the class
                     valid.append(url) # Add that code to the list of found codes
                 else: # If the code was not valid
                     invalid += 1 # Increase the invalid counter by one
+
+            except KeyboardInterrupt:
+                print("\nInterrupted by user") # If the user interrupted the program 
+                break # Break the loop
+            
             except Exception as e: # If the request fails
                 print(f" Error | {url} ") # Tell the user an error occurred
 
