@@ -72,7 +72,7 @@ class NitroGen: # Initialise the class
             try: # Catch any errors that may happen
                 code = "".join(random.choices( # Generate the id for the gift
                     string.ascii_uppercase + string.digits + string.ascii_lowercase,
-                    k = 16
+                    k = 19
                 ))
                 url = f"https://discord.gift/{code}" # Generate the url
 
@@ -122,7 +122,7 @@ Results:
             for i in range(amount): # Loop the amount of codes to generate
                 code = "".join(random.choices(
                     string.ascii_uppercase + string.digits + string.ascii_lowercase,
-                    k = 16
+                    k = 19
                 )) # Generate the code id
 
                 file.write(f"https://discord.gift/{code}\n") # Write the code
