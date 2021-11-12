@@ -30,7 +30,16 @@ try: # Setup try statement to catch the error
 except ImportError: # If it has not been installed
     input(f"Module requests not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install requests'\nPress enter to exit")# Tell the user it has not been installed and how to install it
     exit() # Exit the program
-
+    
+#check if user is connected to internet
+url = "https://github.com"
+try:
+    response = requests.get(url) # Get the responce from the url
+    print("Internet chek")
+    time.sleep(1)
+except:
+    input("You are not connected to internet, check your connection and try again.\nPress enter to exit")# Tell the user
+    exit()# Exit program
 
 class NitroGen: # Initialise the class
     def __init__(self): # The initaliseaiton function
