@@ -36,7 +36,7 @@ url = "https://github.com"
 try:
     response = requests.get(url) # Get the responce from the url
     print("Internet chek")
-    time.sleep(1)
+    time.sleep(.4)
 except:
     input("You are not connected to internet, check your connection and try again.\nPress enter to exit")# Tell the user
     exit()# Exit program
