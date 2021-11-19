@@ -12,6 +12,7 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
+USE_WEBHOOK = True
 
 print(LICNECE)
 
@@ -24,8 +25,8 @@ try:  # Check if the requrements have been installed
 except ImportError:  # If it chould not be installed
     # Tell the user it has not been installed and how to install it
     input(
-        f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install discord_webhook'\nPress enter to exit")
-    exit()  # Exit the program
+        f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install discord_webhook'\nYou can ignore this error if you aren't going to use a webhook.\nPress enter to continue.")
+    USE_WEBHOOK = False
 try:  # Setup try statement to catch the error
     import requests  # Try to import requests
 except ImportError:  # If it has not been installed
@@ -88,12 +89,13 @@ class NitroGen:  # Initialise the class
             input("Specified input wasn't a number.\nPress enter to exit")
             exit()  # Exit program
 
-        # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
-        self.slowType(
-            "\nDo you wish to use a discord webhook? \nIf so type it here or press enter to ignore: ", .02, newLine=False)
-        url = input('')  # Get the awnser
-        # If the url is empty make it be None insted
-        webhook = url if url != "" else None
+        if USE_WEBHOOK:
+            # Get the webhook url, if the user does not wish to use a webhook the message will be an empty string
+            self.slowType(
+                "If you want to use a Discord webhook, type it here or press enter to ignore: ", .02, newLine=False)
+            url = input('')  # Get the awnser
+            # If the url is empty make it be None insted
+            webhook = url if url != "" else None
 
         # print() # Print a newline for looks
 
