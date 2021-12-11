@@ -99,7 +99,7 @@ class NitroGen:  # Initialise the class
             
         if webhook is not None:
             DiscordWebhook(  # Let the user know it has started logging the ids
-                    url=notify,
+                    url=url,
                     content=f"```Started checking urls\nI will send any valid codes here```"
                 ).execute()
 
@@ -175,7 +175,7 @@ Results:
 
             if notify is not None:  # If a webhook has been added
                 DiscordWebhook(  # Send the message to discord letting the user know there has been a valid nitro code
-                    url=notify,
+                    url=url,
                     content=f"Valid Nito Code detected! @everyone \n{nitro}"
                 ).execute()
 
