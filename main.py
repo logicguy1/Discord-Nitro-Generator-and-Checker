@@ -97,11 +97,11 @@ class NitroGen:  # Initialise the class
             # If the url is empty make it be None insted
             webhook = url if url != "" else None
             
-        if webhook is not None:
-            DiscordWebhook(  # Let the user know it has started logging the ids
-                    url=url,
-                    content=f"```Started checking urls\nI will send any valid codes here```"
-                ).execute()
+            if webhook is not None:
+                DiscordWebhook(  # Let the user know it has started logging the ids
+                        url=url,
+                        content=f"```Started checking urls\nI will send any valid codes here```"
+                    ).execute()
 
         # print() # Print a newline for looks
 
