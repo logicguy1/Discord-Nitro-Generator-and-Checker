@@ -111,7 +111,7 @@ class NitroGen:  # Initialise the class
         chars[:0] = string.ascii_letters + string.digits
 
         # generate codes faster than using random.choice
-        c = numpy.random.choice(chars, size=[num, 19])
+        c = numpy.random.choice(chars, size=[num, 23])
         for s in c:  # Loop over the amount of codes to check
             try:
                 code = ''.join(x for x in s)
