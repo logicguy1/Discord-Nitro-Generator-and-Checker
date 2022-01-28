@@ -77,7 +77,7 @@ class NitroGen:  # Initialise the class
                                                         """)  # Print the title card
         time.sleep(2)  # Wait a few seconds
         # Print who developed the code
-        self.slowType("Made by: Drillenissen#4268 && Benz#3554", .02)
+        self.slowType("Made by: Drillenissen#4268 && Benz#6070", .02)
         time.sleep(1)  # Wait a little more
         # Print the first question
         self.slowType(
