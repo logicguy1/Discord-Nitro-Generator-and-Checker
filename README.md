@@ -85,10 +85,11 @@ You need to install Python, that can be done [here](https://www.python.org)
    
 #### Or this can be done using android with unrooted Termux
 ```
+pkg install git
 git clone https://github.com/logicguy1/Discord-Nitro-Generator-and-Checker
 pkg install python
-pip install -r requirements.txt
 cd Discord-Nitro-Generator-and-Checker
+pip install -r requirements.txt
 python3 main.py
 ```
    
