@@ -104,7 +104,6 @@ The code will show you two prompts:
 
 The code will start generating and checking after that step
 
-_For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
