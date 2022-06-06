@@ -135,7 +135,7 @@ class NitroGen:  # Initialise the class
             if os.name == "nt":  # If the system is windows
                 ctypes.windll.kernel32.SetConsoleTitleW(
                     f"Nitro Generator and Checker - {len(valid)} Valid | {invalid} Invalid - Made by Drillenissen#4268")  # Change the title
-                print("")
+                print("") 
             else:  # If it is a unix system
                 # Change the title
                 print(
@@ -184,7 +184,7 @@ Results:
         # If the responce got ignored or is invalid ( such as a 404 or 405 )
         else:
             # Tell the user it tested a code and it was invalid
-            print(f" Invalid | {nitro} ", flush=True,
+            print(f" Valid | {nitro} ", flush=True,
                   end="" if os.name == 'nt' else "\n")
             return False  # Tell the main function there was not a code found
 
