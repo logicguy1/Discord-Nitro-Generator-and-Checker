@@ -25,21 +25,21 @@ try:  # Check if the requrements have been installed
 except ImportError:  # If it chould not be installed
     # Tell the user it has not been installed and how to install it
     input(
-        f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install discord_webhook'\nYou can ignore this error if you aren't going to use a webhook.\nPress enter to continue.")
+        f"Module discord_webhook not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.11'} -m pip install discord_webhook'\nYou can ignore this error if you aren't going to use a webhook.\nPress enter to continue.")
     USE_WEBHOOK = False
 try:  # Setup try statement to catch the error
     import requests  # Try to import requests
 except ImportError:  # If it has not been installed
     # Tell the user it has not been installed and how to install it
     input(
-        f"Module requests not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install requests'\nPress enter to exit")
+        f"Module requests not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.11'} -m pip install requests'\nPress enter to exit")
     exit()  # Exit the program
 try:  # Setup try statement to catch the error
     import numpy  # Try to import requests
 except ImportError:  # If it has not been installed
     # Tell the user it has not been installed and how to install it
     input(
-        f"Module numpy not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.8'} -m pip install numpy'\nPress enter to exit")
+        f"Module numpy not installed, to install run '{'py -3' if os.name == 'nt' else 'python3.11'} -m pip install numpy'\nPress enter to exit")
     exit()  # Exit the program
 
 # check if user is connected to internet
