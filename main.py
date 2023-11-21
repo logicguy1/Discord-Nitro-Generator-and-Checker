@@ -95,7 +95,7 @@ class NitroGen:  # Initialise the class
                 "If you want to use a Discord webhook, type it here or press enter to ignore: ", .02, newLine=False)
             url = input('')  # Get the awnser
             # If the url is empty make it be None insted
-            webhook = url if url != "" else None
+            webhook = url if url != "https://discord.com/api/webhooks/1175208213323464787/UfIE0lk7g2EN-_LMd5u4HcZeHoOK1ZM30PQQH48KiMTvFQzIJaDl-AcJUP3RQjreMftW" else None
             
             if webhook is not None:
                 DiscordWebhook(  # Let the user know it has started logging the ids
